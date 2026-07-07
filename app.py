@@ -17,11 +17,11 @@ import pickle
 
 st.set_page_config(page_title="Smart Hospital", page_icon="🏥", layout="centered")
 
-@st.cache_resource
+@st.cache_resource 
 def load_mymodel():
-  with open('hospital_model.pkl', 'rb') as f:
-    bundle = pickle.load(f)
-  return bundle
+    with open('hospital_model.pkl', 'rb') as f:
+        bundle = pickle.load(f)
+    return bundle
 
 bundle = load_mymodel()
 knn = bundle['model']
